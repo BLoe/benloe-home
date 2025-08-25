@@ -105,38 +105,35 @@
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 0;
+            gap: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 4px;
+            backdrop-filter: blur(10px);
         }
 
         .tab-button {
-            background: rgba(255, 255, 255, 0.1);
+            background: transparent;
             border: none;
-            padding: 12px 32px;
-            color: rgba(255, 255, 255, 0.8);
+            padding: 12px 28px;
+            color: rgba(255, 255, 255, 0.7);
             cursor: pointer;
             transition: var(--transition);
             font-size: 1rem;
             font-weight: 500;
-            border-radius: 0;
-        }
-
-        .tab-button:first-child {
-            border-radius: 25px 0 0 25px;
-        }
-
-        .tab-button:last-child {
-            border-radius: 0 25px 25px 0;
+            border-radius: 6px;
+            position: relative;
         }
 
         .tab-button.active {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             color: white;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .tab-button:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
+        .tab-button:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Main Content */
@@ -335,16 +332,11 @@
             .nav-tabs {
                 flex-direction: column;
                 align-items: center;
+                gap: 4px;
             }
 
             .tab-button {
-                border-radius: 25px !important;
-                margin-bottom: 0.5rem;
                 min-width: 120px;
-            }
-
-            .tab-button:last-child {
-                margin-bottom: 0;
             }
         }
 
@@ -419,11 +411,6 @@
         </div>
 
         <div id="projects" class="tab-content">
-            <div class="projects-header">
-                <h2>Experiments & Projects</h2>
-                <p>A collection of web experiments, each with their own tech stack and purpose.</p>
-            </div>
-            
             <div class="project-grid">
                 <a href="http://gamenight.benloe.com" class="project-card">
                     <h3>Game Night Scheduler</h3>

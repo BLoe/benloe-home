@@ -411,7 +411,7 @@
     <header>
         <div class="auth-section">
             <div id="auth-content">
-                <a href="https://auth.benloe.com/" class="auth-button" id="sign-in-btn">Sign In</a>
+                <a href="https://auth.benloe.com/?redirect=https://benloe.com" class="auth-button" id="sign-in-btn">Sign In</a>
             </div>
         </div>
         <div class="header-content">
@@ -454,6 +454,16 @@
 
         <div id="projects" class="tab-content">
             <div class="project-grid">
+                <a href="https://weights.benloe.com" class="project-card">
+                    <h3>💪 Weight Tracker</h3>
+                    <p>Track your lifting progress with automatic 1RM calculations and workout history</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Local Storage</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </a>
+                
                 <a href="http://gamenight.benloe.com" class="project-card">
                     <h3>Game Night Scheduler</h3>
                     <p>Schedule game nights with friends</p>
@@ -544,7 +554,7 @@
         function showSignInButton() {
             const authContent = document.getElementById('auth-content');
             authContent.innerHTML = `
-                <a href="https://auth.benloe.com/" class="auth-button" id="sign-in-btn">Sign In</a>
+                <a href="https://auth.benloe.com/?redirect=https://benloe.com" class="auth-button" id="sign-in-btn">Sign In</a>
             `;
         }
     </script>
